@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Temporary Title</title>
+  <meta name="description" content="Thomas H. Palmer's work portfolio">
+  <meta name="author" content="Thomas H. Palmer">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css?v=0.08">
+
+  <!-- JSX Interpreter -->
+  <!-- Note: only used so this portfolio's JSX is readabe -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="root"></div>
+
+  <div id="wrapper" class="container-fluid">
+
+    <!-- header -->
+    <div id="header"></div>
+
+    <!-- navigation -->
+    <div id="navigation" class="nav"></div>
+
+    <!-- page display -->
+    <div id="content"></div>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+  </div>
+
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Load React navigation component. -->
+  <script type="text/babel" src="js/navigation.js?v=1.91"></script>
+  <script type="text/babel" src="js/content.js?v=0.65"></script>
+
+  <script type="text/javascript">
+
+  </script>
+
+</body>
+
+</html>
