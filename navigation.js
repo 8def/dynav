@@ -164,9 +164,9 @@ class NavBar extends React.Component {
 
     if (isBot) {
       // Use permaLinks to help bots navigate
-      this.fetchLinks("/cms/perm-navbar.json?v=0.04");
+      this.fetchLinks("perm-navbar.json?v=0.04");
     } else {
-      this.fetchLinks("/cms/navbar.json?v=0.13");
+      this.fetchLinks("navbar.json?v=0.13");
     }
   }
 

@@ -1,0 +1,83 @@
+[
+    {
+      "id":"1",
+      "text":"Home",
+      "title":"Work Portfolio",
+      "url":"https://8f.wtf",
+      "dd":[]
+    },
+    {
+      "id":"2",
+      "text":"About",
+      "title":"About me",
+      "url":"https://8f.wtf/about",
+      "dd":
+      [
+        {
+          "id":"8",
+          "text":"Beginnings",
+          "title":"How I started",
+          "url":"https://8f.wtf/about-beginnings",
+          "dd":[]
+        },
+        {
+          "id":"9",
+          "text":"Aspirations",
+          "title":"Where I'm going",
+          "url":"https://8f.wtf/about-aspirations",
+          "dd":[]
+        },
+        {
+          "id":"10",
+          "text":"History",
+          "title":"My professional accomplishments",
+          "url":"https://8f.wtf/about-history",
+          "dd":[]
+        },
+        {
+          "id":"11",
+          "text":"Hobbies",
+          "title":"My passtimes",
+          "url":"https://8f.wtf/about-hobbies",
+          "dd":[]
+        }
+      ]
+    },
+    {
+      "id":"3",
+      "text":"Examples",
+      "title":"Work examples",
+      "url":"https://8f.wtf/examples",
+      "dd":
+      [
+        {
+          "id":"5",
+          "text":"Frontend",
+          "title":"Frontend applications",
+          "url":"https://8f.wtf/examples-frontend",
+          "dd":[]
+        },
+        {
+          "id":"6",
+          "text":"Backend",
+          "title":"Backend applications",
+          "url":"https://8f.wtf/examples-backend",
+          "dd":[]
+        },
+        {
+          "id":"7",
+          "text":"Fullstack",
+          "title":"Fullstack applications",
+          "url":"https://8f.wtf/examples-fullstack",
+          "dd":[]
+        }
+      ]
+    },
+    {
+      "id":"4",
+      "text":"Contact",
+      "title":"Contact me",
+      "url":"https://8f.wtf/contact",
+      "dd":[]
+    }
+]
