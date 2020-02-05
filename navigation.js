@@ -75,12 +75,14 @@ function NavList(props) {
   );
 }
 
+
 class NavBar extends React.Component {
   constructor() {
     super();
 
     this.state = {
       isLoading: true,     // false once json has loaded
+      isBot: false,        // toggled by user agent or button
       navLinks: [],        // for displaying menu items
       linkLengths: lnkLen, // for loading animation
       active: 0,           // change class for current page
@@ -89,6 +91,8 @@ class NavBar extends React.Component {
       error: null          // loading error
     }
 
+    // Toggle bot mode: showing # or permaLinks
+    this.toggleBot = this.toggleBot.bind(this);
     // React to browser back/forward buttons
     this.handleNavigation = this.handleNavigation.bind(this);
     // Play the loading animation
@@ -103,6 +107,13 @@ class NavBar extends React.Component {
     this.updatePage = this.updatePage.bind(this);
     // Return the current page slug
     this.getActive = this.getActive.bind(this);
+  }
+
+  // Display a bot toggle buttons
+  toggleBot() {
+    this.setState({isBot: !this.state.isBot})
+    this.state.isBot ? this.fetchLinks("navbar.json?v=0.13")
+                     : this.fetchLinks("perm-navbar.json?v=0.04");
   }
 
   animateLinks(num) {
@@ -159,6 +170,7 @@ class NavBar extends React.Component {
     for (let i = 0; i < tags.length; i++) {
       if (agent.indexOf(tags[i]) > 0) {
         isBot = true;
+        this.state.isBot = true;
       }
     }
 
@@ -238,6 +250,9 @@ class NavBar extends React.Component {
     const { isLoading, navLinks, active, activeChild, error } = this.state;
     return (
       <ul>
+      <button onClick={() => this.toggleBot()}>
+        Viewing as a {this.state.isBot ? "robot" : "human"}
+      </button>
         {error ? <p>{error.message}</p> : null}
         {!isLoading ? (
           navLinks.map(links => {
