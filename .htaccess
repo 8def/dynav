@@ -1,2 +1,4 @@
 RewriteEngine On
-RewriteRule ^([^/w]+)/?$ index.html?page=$1 [QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^[^.]+$ index.html [L]
